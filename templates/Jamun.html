@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Plant Identified</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'Plant_image/Jamun.jpg' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+
+					<h4><b> Plant Info: </b> </h4>
+                    <h6>
+                     Jambul or Jamun is an evergreen tropical tree in the flowering plant family Myrtaceae, native to India,
+                     Pakistan, Indonesia and Sri Lanka.
+                     It is also grown in other areas of southern Asia including Myanmar, Nepal and Afghanistan.
+                     The Jamun tree starts flowering in March-April. The fragrant flowers of Jamun are small, nearly 5
+                     millimetres in diameter. This is followed by the fruit which appears in May-June and resembles a large berry.
+                     The berry is oblong and ovoid. It is green when just appearing, pink when as it matures, and shining crimson
+                     black when fully ripe. Another variety comes in white and some people say that it can be used as a medicine.
+                     Jamun fruit is a mixture of sweet,slightly sub acid spicy flavour.
+                     The fruit is universally accepted to be very good for medicinal purposes, especially diabetics.
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

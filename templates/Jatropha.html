@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Plant Identified</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'Plant_image/Jatropha.jpg' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+
+					<h4><b> Plant Info: </b> </h4>
+                    <h6>
+                     Jatropha curcas is a species of flowering plant in the spurge family, Euphorbiaceae, that is
+                     native to the American tropics, most likely Mexico and Central America.The plant can grow in wastelands
+                     and grows on almost any terrain, even on gravelly, sandy and saline soils.
+                     It can thrive in poor and stony soils, although new research suggests that the plant's ability to adapt
+                     to these poor soils is not as extensive as had been previously stated. Jatrophas are drought-resistant perennial and multipurpose shrubs or trees,
+                     similar to the cassava plant. Jatropha is a deciduous tree, shedding its leaves during the dry season. It can grow to a height of 3-5 m, and remains
+                     productive for 30 to 50 years. Jatropha has a deep taproot and four shallow lateral roots.
+                     The taproot anchors the plant in the soil, stabilizing the soil against landslides, and the lateral roots prevent soil erosion.
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

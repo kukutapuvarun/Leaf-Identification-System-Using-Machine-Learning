@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Plant Identified</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body background="{{url_for('static',filename = 'images/Back.jpg')}}">
+
+
+   <br>
+
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{url_for('static',filename = 'Plant_image/Lemon.jpg' )}}" alt="User Image" style="width:500px;height:500px;">
+
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(15, 15, 15); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+
+					<h4><b> Plant Info: </b> </h4>
+                    <h6>
+                    Lemon, Citrus limon, is a small evergreen tree in the family Rutaceae grown for its edible fruit which,
+                    among other things, are used in a variety of foods and drinks. The tree has a spreading, upright growth
+                    habit, few large branches and stiff thorns. The tree possesses large, oblong or oval, light green leaves
+                    and produces purple-white flowers in clusters. The lemon fruit is an ellipsoid berry surrounded by a green
+                    rind, which ripens to yellow, protecting soft yellow segmented pulp. Lemon trees can reach 3–6 m (10–20 ft)
+                    in height and can live for many years, reaching full fruit bearing capacity in approximately 40 years.
+                    Lemon may also be referred to as bush lemon or Persian apple and likely originated from the eastern Himalaya of India.
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
